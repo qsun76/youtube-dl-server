@@ -10,6 +10,7 @@ FROM python:alpine
 RUN mkdir -p /usr/src/app
 COPY ./ydl_server /usr/src/app/ydl_server
 COPY ./youtube-dl-server.py /usr/src/app/
+RUN chmod 0777 /usr/src/app/youtube-dl-server.py
 
 # Download static files (JS/CSS Libraries)
 WORKDIR /usr/src/app/ydl_server/static
